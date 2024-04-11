@@ -51,7 +51,7 @@ namespace LegacyApp
             UserDataAccess.AddUser(user);
             return true;
         }
-        public static bool Validate(string firstName, string lastName, string email, DateTime dateOfBirth)
+        static bool Validate(string firstName, string lastName, string email, DateTime dateOfBirth)
         {
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName)) return false;
             if (!email.Contains('@') && !email.Contains('.')) return false;
